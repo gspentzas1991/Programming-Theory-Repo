@@ -113,6 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb9495829f4539f4aadaf0ca64770611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_scoreValue: 3
   destructionParticle: {fileID: 4339928444752189464, guid: eb90772882b9e7641a5989627cbe8061, type: 3}
   applePrefab: {fileID: 2230597073137879988, guid: bd2df9e15829249498716f1f9f192342, type: 3}
 --- !u!65 &-8405029145672734067

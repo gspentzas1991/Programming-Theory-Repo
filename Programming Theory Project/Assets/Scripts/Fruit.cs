@@ -7,15 +7,23 @@ public class Fruit : MonoBehaviour
     private Rigidbody fruitRigidbody;
     private float torqueForce = 100f;
     [SerializeField]
+    private int m_scoreValue;
     //ENCAPSULATION
-    public int scoreValue { get; private set; }
+    public int scoreValue
+    {
+        get { return m_scoreValue; }
+        private set { m_scoreValue = value; }
 
+    }
     [SerializeField]
     private ParticleSystem destructionParticle;
+
+    protected ScoreHandler scoreHandler;
 
     private void Start()
     {
         fruitRigidbody = GetComponent<Rigidbody>();
+        scoreHandler = GameObject.Find("ScoreManager").GetComponent<ScoreHandler>();
         ApplyRotation();
     }
 
@@ -35,5 +43,6 @@ public class Fruit : MonoBehaviour
         var particle = Instantiate(destructionParticle, transform.position, destructionParticle.transform.rotation);
         particle.Play();
         Destroy(gameObject);
+        scoreHandler.IncreaseScore(scoreValue);
     }
 }
