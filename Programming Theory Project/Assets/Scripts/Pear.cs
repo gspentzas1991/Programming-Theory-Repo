@@ -9,5 +9,11 @@ using UnityEngine;
 /// </summary>
 public class Pear : Fruit
 {
+    [SerializeField] private GameObject applePrefab;
 
+    override protected void DestroyFruit()
+    {
+        base.DestroyFruit();
+        Instantiate(applePrefab, transform.position, transform.rotation);
+    }
 }
