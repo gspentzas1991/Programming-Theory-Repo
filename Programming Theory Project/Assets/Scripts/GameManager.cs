@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
         highscoreText.text = $"Highscore: {highscore.Username} : {highscore.Score}";
     }
 
-    //ABSTRACTION - classes call the public StartGame function, which uses low-level private methods to complete the task
+    // ABSTRACTION - classes call the public StartGame function, which uses low-level private methods to complete the task
     public void StartGame()
     {
         LoadScene(1);

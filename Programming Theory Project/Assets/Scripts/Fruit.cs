@@ -8,7 +8,7 @@ public class Fruit : MonoBehaviour
     private float torqueForce = 100f;
     [SerializeField]
     private int m_scoreValue;
-    //ENCAPSULATION
+    // ENCAPSULATION
     public int scoreValue
     {
         get { return m_scoreValue; }
