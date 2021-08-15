@@ -13,7 +13,7 @@ public class Fruit : MonoBehaviour
     [SerializeField]
     private ParticleSystem destructionParticle;
 
-    void Start()
+    private void Start()
     {
         fruitRigidbody = GetComponent<Rigidbody>();
         ApplyRotation();
@@ -29,9 +29,11 @@ public class Fruit : MonoBehaviour
         DestroyFruit();
     }
 
+    // POLYMORPHISM
     protected virtual void DestroyFruit()
     {
+        var particle = Instantiate(destructionParticle, transform.position, destructionParticle.transform.rotation);
+        particle.Play();
         Destroy(gameObject);
-        destructionParticle.Play();
     }
 }

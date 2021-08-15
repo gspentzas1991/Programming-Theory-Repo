@@ -9,5 +9,13 @@ using UnityEngine;
 /// </summary>
 public class Banana : Fruit
 {
+    [SerializeField]
+    private AudioClip audioclip;
 
+    // POLYMORPHISM
+    override protected void DestroyFruit()
+    {
+        base.DestroyFruit();
+        AudioSource.PlayClipAtPoint(audioclip, transform.position);
+    }
 }

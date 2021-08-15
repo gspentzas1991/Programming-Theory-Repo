@@ -94,12 +94,12 @@ Rigidbody:
   m_GameObject: {fileID: 4994350209411462896}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 5
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 88
   m_CollisionDetection: 0
 --- !u!114 &5347033995544562355
 MonoBehaviour:
@@ -113,6 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb9495829f4539f4aadaf0ca64770611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destructionParticle: {fileID: 4339928444752189464, guid: eb90772882b9e7641a5989627cbe8061, type: 3}
 --- !u!65 &-8405029145672734067
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ using UnityEngine;
 /// </summary>
 public class Apple : Fruit
 {
+    // POLYMORPHISM
     override protected void  DestroyFruit()
     {
         base.DestroyFruit();
