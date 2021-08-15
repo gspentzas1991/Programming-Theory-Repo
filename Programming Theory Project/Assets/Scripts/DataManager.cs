@@ -9,6 +9,7 @@ using UnityEngine;
 /// </summary>
 public class DataManager : MonoBehaviour
 {
+    //ENCAPSULATION
     public static string username { get; set; }
 
     /// <summary>

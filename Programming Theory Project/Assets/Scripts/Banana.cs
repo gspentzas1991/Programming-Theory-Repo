@@ -3,17 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // INHERITANCE -- Banana inherits from fruit
+
+/// <summary>
+/// Banans play a sound when they are destroyed
+/// </summary>
 public class Banana : Fruit
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

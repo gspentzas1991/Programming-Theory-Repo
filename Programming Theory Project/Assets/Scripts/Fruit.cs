@@ -4,15 +4,33 @@ using UnityEngine;
 
 public class Fruit : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Rigidbody fruitRigidbody;
+    private float torqueForce = 100f;
+    [SerializeField]
+    //ENCAPSULATION
+    public int scoreValue { get; private set; }
+
+    [SerializeField]
+    private ParticleSystem destructionParticle;
+
     void Start()
     {
-        
+        fruitRigidbody = GetComponent<Rigidbody>();
+        ApplyRotation();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void ApplyRotation()
     {
-        
+        fruitRigidbody.AddTorque(new Vector3(0, torqueForce, 0));
+    }
+
+    private void OnMouseDown()
+    {
+        DestroyFruit();
+    }
+
+    protected virtual void DestroyFruit()
+    {
+        destructionParticle.Play();
     }
 }
