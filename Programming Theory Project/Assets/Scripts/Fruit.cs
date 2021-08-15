@@ -31,6 +31,7 @@ public class Fruit : MonoBehaviour
 
     protected virtual void DestroyFruit()
     {
+        Destroy(gameObject);
         destructionParticle.Play();
     }
 }

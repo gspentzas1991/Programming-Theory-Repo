@@ -8,5 +8,9 @@ using UnityEngine;
 /// </summary>
 public class Apple : Fruit
 {
-
+    override protected void  DestroyFruit()
+    {
+        base.DestroyFruit();
+        Debug.Log("Destroyed an apple!");
+    }
 }
